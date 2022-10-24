@@ -74,7 +74,7 @@ body{
     border-radius: 10px;
     outline: none;
     border: none;
-    background: #3A1903;
+    background: #362418;
     padding-left: 50px;
     font-size: 18px;
     color: white;
@@ -122,7 +122,13 @@ body{
     position: relative;
     padding: 10px 6px;
     height: 60px;
-    background: #3A1903;
+    transition: all 0.4s ease;
+    background: #362418;
+}
+
+.sidebar .profile_content .profile:hover{
+    background: white;
+    color: #251101;
 }
 
 .profile_content .profile .profile_details{
@@ -142,8 +148,8 @@ body{
 }
 
 .profile .profile_details .name{
-    font-size: 15px;
-    font-weight: 400;
+    font-size: 18px;
+    font-weight: 500;
 }
 
 .profile .profile_details .job{
@@ -160,5 +166,7 @@ body{
     font-size: 20px;
     border-radius: 10px;
 }
+
+
 
 
