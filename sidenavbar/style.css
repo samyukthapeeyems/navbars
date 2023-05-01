@@ -16,10 +16,15 @@ body{
     position: fixed;
     top: 0;
     bottom: 0;
-    padding: 6px 14px;
+    padding: 6px 16px;
     height: 100%;
-    width: 240px;
+    width: 78px;
     background: #251101;
+    transition: all 0.5s ease;
+}
+
+.sidebar.active{
+    width: 240px;
 }
 
 .sidebar .logo_content .logo{
@@ -28,6 +33,13 @@ body{
     height: 50px;
     width: 100%;
     align-items: center;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sidebar.active .logo_content .logo{
+    opacity: 1;
+    pointer-events: none;
 }
 
 .logo_content .logo i{
@@ -43,13 +55,18 @@ body{
 .sidebar #button{
     position: absolute;
     color: white;
-    left: 90%;
+    left: 50%;
     top: 6px;
     font-size: 30px;
     height: 50px;
     text-align: center;
     line-height: 50px;
     transform: translateX(-50%);
+}
+
+.sidebar.active #button{
+    left: 90%;
+
 }
 
 .sidebar ul{
@@ -63,6 +80,16 @@ body{
     margin: 0 5px;
     list-style: none;
     line-height: 50px;
+}
+
+.sidebar .link_name{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sidebar.active .link_name{
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .sidebar ul li input{
@@ -84,16 +111,23 @@ body{
     padding: 15px 0 0 15px;
     position: absolute;
     z-index: 99;
+    align-items: center;
     color: white;
     font-size: 22px;
+    transition: all 0.5s ease;
 }
+
+/* .sidebar ul li .bx-search:hover{
+    background: white;
+    color: #362418;
+} */
 
 .sidebar ul li a{
     color: white;
     display: flex;
     align-items: center;
     text-decoration: none;
-    transition: all 0.4s ease;
+    transition: all 0.4s ease-in-out;
     border-radius: 10px;
 }
 
@@ -119,6 +153,7 @@ body{
 }
 
 .sidebar .profile_content .profile{
+    font-weight: 300;
     position: relative;
     padding: 10px 6px;
     height: 60px;
@@ -134,6 +169,13 @@ body{
 .profile_content .profile .profile_details{
     display: flex;
     align-items: center;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sidebar.active .profile .profile_details{
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .profile .profile_details img{
@@ -158,15 +200,20 @@ body{
 
 .profile #log_out{
     position: absolute;
-    left: 88%;
+    left: 50%;
     bottom: 5px;
     transform: translateX(-50%);
     min-width: 50px;
     line-height: 50px;
     font-size: 20px;
     border-radius: 10px;
+    text-align: center;
 }
 
+.sidebar.active #log_out{
+    left: 88%;
+
+}
 
 
 
